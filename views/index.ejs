@@ -1,0 +1,38 @@
+
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<main id="main-site">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-caixa" class="border-shadow">
+                <span class="text-gradient">Nova Caixa <i class="fas fa-box-open"></i></span>
+            </a>
+        </div>
+
+        <!--form-->
+        <form action="/" method="POST">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Ação</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <%-include('include/_show')%>
+            </tbody>
+        </table>
+    </form>
+    </div>
+</main>
+<!--/Main-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->

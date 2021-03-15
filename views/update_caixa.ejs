@@ -1,0 +1,49 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+    <!--Main-->
+    <main id="main-site">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i> Todas as caixas</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Editar caixa</h2>
+                <span class="text-light">Edite a caixa</span>
+            </div>
+
+            <!--add caixa form-->
+            <form method="POST" id="update_caixa">
+                <div class="nova_caixa">
+                    <div class="form-group">
+                        <label for="nome" class="text-light">Nome</label>
+                        <input type="hidden" name="id" value="<%=user._id%>">
+                        <input type="text" name="nome" value="<%=user.nome%>" placeholder="Nome da caixa">
+                    </div>
+                    <div class="form-group">
+                        <label for="drescricao" class="text-light">Descrição</label>
+                        <input type="text" name="drescricao" value="<%=user.descricao%>" placeholder="L=1 A=1 C=1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade" class="text-light">Quantidade</label>
+                    <input type="text" name="quantidade" value="<%=user.quantidade%>" placeholder="Quantidade de caixas">
+                </div>
+            
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Cadastrar</button>
+                </div>
+            </div>
+            
+            </form>
+
+        </div>
+    </main>
+    <!--/Main-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
